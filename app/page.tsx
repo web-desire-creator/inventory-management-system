@@ -1,6 +1,7 @@
 import {Input} from "@/components/ui/Input"
 import { Checkbox } from "@/components/ui/Checkbox"
 import {Button} from "@/components/ui/Button"
+import Link from "next/link"
 import {
   Card,
   CardContent,
@@ -20,22 +21,25 @@ export default function Home() {
       <CardTitle>Login to Your Account</CardTitle>
         </div>
       <div className="text-center">
-        <div className=" w-10/12 mx-auto pb-10">
+        <div className="flex flex-col gap-y-4 w-10/12 mx-auto pb-10">
         <Input type="text" placeholder ="Pin Number"/>
         <Input type="password" placeholder ="Password"/>
         </div>
         <div className="flex justify-around pb-10">
-        <div className="flex"><Checkbox />
+        <div  className="flex items-stretch"> 
+          <div className="flex items-baseline gap-x-1"><Checkbox />
         <div>
             Remember Me
-          </div>
+          </div></div>
         </div>
           <div>
+            <Link href="/forgetPassword">
             Forget Password?
+            </Link>
           </div>
         </div>
         <div className="pb-10">
-          <Button>Login</Button> 
+          <Button><Link href="/dashboard">Login</Link></Button> 
         </div>
       </div>
     </div>

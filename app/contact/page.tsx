@@ -18,16 +18,16 @@ export default function Home() {
       <div className="text-center">
         <div className="py-10">
 
-      <CardTitle>Recover Your Password!</CardTitle>
+      <CardTitle>Write your Complain!</CardTitle>
         </div>
       <div className="text-center">
         <div className=" w-10/12 flex flex-col gap-y-5 mx-auto pb-8">
         <Input type="text" placeholder ="Name"/>
         <Input type="text" placeholder ="Pin Number"/>
-        <Input type="text" placeholder ="Write a Request to admin to recover you Password"/>
+        <Input type="text" placeholder ="Write your Complain here!"/>
         </div>
         <div className="pb-10">
-          <Button><Link href="/">Submit</Link></Button> 
+          <Button><Link href="/dashboard">Submit</Link></Button> 
         </div>
       </div>
     </div>
