@@ -25,7 +25,7 @@ import { useState } from 'react'
 import { issueData,ReturnData, currentData } from '../data/Data'
 import Sidebar from '@/components/Sidebar'
 
-export default function dashboard() {
+export default function Dashboard() {
     const [issue,setissue]=useState(true)
     const [Return,setReturn]=useState(false)
     const [current,setcurrent]=useState(false)
@@ -86,8 +86,8 @@ export default function dashboard() {
                 </TableHeader>
                 <TableBody>
                    { 
-                   issue && issueData.map((item)=>(     
-                    <TableRow>
+                   issue && issueData.map((item, index)=>(     
+                    <TableRow key={index}>
                     
                     <TableCell>{item.item_name}</TableCell>
                     <TableCell>{item.Quantity}</TableCell>
@@ -97,8 +97,8 @@ export default function dashboard() {
                     </TableRow>   
                     ))}
                     {
-                    Return && ReturnData.map((item)=>(     
-                        <TableRow>
+                    Return && ReturnData.map((item, index)=>(     
+                        <TableRow key={index}>
                         
                         <TableCell>{item.item_name}</TableCell>
                         <TableCell>{item.Quantity}</TableCell>
@@ -108,8 +108,8 @@ export default function dashboard() {
                         </TableRow>   
                         ))
                      }  
-                     {current && currentData.map((item)=>(     
-                            <TableRow>
+                     {current && currentData.map((item, index)=>(     
+                            <TableRow key={index}>
                             
                             <TableCell>{item.item_name}</TableCell>
                             <TableCell>{item.Quantity}</TableCell>

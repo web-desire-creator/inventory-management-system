@@ -15,7 +15,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import Sidebar from '@/components/Sidebar'
-export default function totalinventory() {
+export default function Totalinventory() {
   const [query,setquery]=useState("")
   console.log(totalinventorydata.filter(i=>i.item_name.toLowerCase().includes("an")))
   return (
@@ -40,9 +40,9 @@ export default function totalinventory() {
                 </TableHeader>
                 <TableBody>
                 { 
-                   totalinventorydata.filter((i=>i.item_name.toLowerCase().includes(query))).map((item)=>(  
+                   totalinventorydata.filter((i=>i.item_name.toLowerCase().includes(query))).map((item, index)=>(  
                      
-                    <TableRow>
+                    <TableRow key={index}>
                     <TableCell> <Link href={"/totalinventory/"+item.item_name}>  {">"} </Link> {item.item_name}</TableCell>
                     <TableCell>{item.Catagory}</TableCell>
                     <TableCell>{item.Consumeable}</TableCell>
