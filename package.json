@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "generate": "drizzle-kit generate:pg",
+    "migrate":"drizzle-kit push:pg",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -18,18 +20,31 @@
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
     "autoprefixer": "10.4.14",
+    "axios": "^1.5.0",
     "class-variance-authority": "^0.6.0",
     "clsx": "^1.2.1",
+    "drizzle-orm": "^0.28.5",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.3",
+    "jose": "^4.14.4",
+    "jwt-decode": "^3.1.2",
     "lucide-react": "^0.240.0",
     "next": "13.4.3",
+    "pg": "^8.11.3",
+    "pg-pool": "^3.6.1",
     "postcss": "8.4.23",
+    "postgres": "^3.3.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "swr": "^2.2.2",
     "tailwind-merge": "^1.13.0",
     "tailwindcss": "3.3.2",
     "tailwindcss-animate": "^1.0.5",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.10.2",
+    "drizzle-kit": "^0.19.13"
   }
 }

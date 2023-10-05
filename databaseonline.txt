@@ -1,0 +1,66 @@
+table users{
+  id integer pk
+  username varchar(5)
+  password varchar
+  name varchar (100)
+  image varchar 
+  previlige_id integer
+}
+table typeofasset{
+  id integer pk
+  consumeable boolean
+}
+table role {
+  id integer pk
+  previlige varchar(10)
+}
+table asset{
+  id integer pk
+  item_name varchar(300)
+  item_unit varchar(5)
+  quantity doubleprecision
+}
+table catagory{
+  id integer pk
+  type varchar (50)
+}
+
+table status{
+  id integer pk
+  issue_status boolean
+  return_status boolean
+}
+table issue_data{
+  id integer pk
+  item_name_id integer
+  Issued_Quantity doubleprecision
+  Date varchar
+  Issued_to varchar
+  name_id integer
+}
+table returning_data{
+  id integer pk
+  item_name_id integer
+  return_Quantity doubleprecision
+  Date varchar
+  Issued_to_id integer
+  name_id integer
+}
+table total_inventory{
+  id integer pk
+  item_name_id integer
+  catagory_id integer
+  consumeable_id integer
+  total function
+  available function 
+}
+
+ref: role.id > users.previlige_id
+ref: issue_data.item_name_id > asset.id
+ref: issue_data.name_id > users.id
+ref: returning_data.item_name_id > asset.id 
+ref: returning_data.name_id > users.id
+ref: returning_data.Issued_to_id > issue_data.Issued_to
+ref: total_inventory.item_name_id > asset.item_name
+ref: total_inventory.catagory_id > catagory.id
+ref: total_inventory.consumeable_id > typeofasset.id

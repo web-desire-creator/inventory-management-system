@@ -1,0 +1,27 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1694946386931,
+      "tag": "0000_absurd_havok",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1694946480303,
+      "tag": "0001_shallow_sheva_callister",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1694946748025,
+      "tag": "0002_funny_misty_knight",
+      "breakpoints": true
+    }
+  ]
+}

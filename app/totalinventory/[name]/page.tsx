@@ -26,9 +26,9 @@ export default function GiveName({ params, searchParams }: {
                 </TableHeader>
                 <TableBody>
                 { 
-                   productRecord.map((item, index)=>(  
+                   productRecord.map((item)=>(  
                      
-                    <TableRow key={index}>
+                    <TableRow>
                     <TableCell>{item.id}</TableCell>
                     <TableCell>{item.personName}</TableCell>
                     <TableCell>{item.Quantity}</TableCell>

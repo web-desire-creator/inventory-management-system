@@ -5,7 +5,7 @@ export const issueData =[
         Quantity : "2",
         Date: "29/05/23",
         Issued_to: "Bilal",
-        Issued_By: "Bilal"
+        Issued_By: "81391"
         },
         {   id : 2,
             item_name : "Computer",
@@ -375,5 +375,31 @@ export const productRecord=[
         personName: "Khalid",
         Quantity: -4,
         date:"19/06/20203"    
+    }
+]
+export const users=[
+    {   id:1,
+        name: "Ameen Bhatti",
+        image: "/1.jpg",
+        userName: "11111",
+        password: "bilal123" 
+    },
+    {   id:2,
+        name: "Bilal Sheikh",
+        image: "/1.jpg",
+        userName: "81391",
+        password: "bilal123" 
+    },
+    {   id:3,
+        name: "Faraz Tariq",
+        image: "/3.jpg",
+        userName: "22222",
+        password: "bilal123" 
+    },
+    {   id:4,
+        name: "Khalid Usman",
+        image: "/4.jpg",
+        userName: "33333",
+        password: "bilal123" 
     }
 ]

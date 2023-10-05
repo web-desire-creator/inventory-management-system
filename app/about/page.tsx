@@ -1,7 +1,5 @@
 import Sidebar from '@/components/Sidebar'
-import { Button } from '@/components/ui/Button'
 import { Card, CardTitle } from '@/components/ui/Card'
-import { Input } from '@/components/ui/Input'
 import React from 'react'
 
 export default function issueAssets() {

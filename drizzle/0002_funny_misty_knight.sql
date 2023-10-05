@@ -1,0 +1,1 @@
+ALTER TABLE "returnData" ALTER COLUMN "date" SET DATA TYPE varchar(50);

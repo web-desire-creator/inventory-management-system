@@ -1,61 +1,17 @@
 "use client"
-import React from 'react'
-import Link from 'next/link'
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-  } from "@/components/ui/Card"
-import { Input } from '@/components/ui/Input'
-import Image from 'next/image'
-import { Button } from '@/components/ui/Button'
-import {
-    Table,
-    TableBody,
-    TableCaption,
-    TableCell,
-    TableHead,
-    TableHeader,
-    TableRow,
-  } from "@/components/ui/Table"
-import { useState } from 'react'
-import { issueData,ReturnData, currentData } from '../data/Data'
-import Sidebar from '@/components/Sidebar'
+import React, { useState } from 'react'
+import { Button } from './ui/Button'
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './ui/Table'
+import { Card } from './ui/Card'
+import { ReturnData, currentData, issueData } from '@/app/data/Data'
 
-export default function Dashboard() {
+export default function RecordData() {
     const [issue,setissue]=useState(true)
     const [Return,setReturn]=useState(false)
     const [current,setcurrent]=useState(false)
-    return (
-    <div className='bg-slate-500 grid grid-cols-12'>
-        <Sidebar/>
 
-        <div className='col-span-10 w-4/5 pt-10 mx-auto'>
-            <Card>
-            <div className='flex flex-col items-center gap-y-10'>
-            <div className='pt-10'>
-            <CardTitle>Personal Details</CardTitle>
-            </div>
-            <div className='flex gap-x-32 items-center pb-10'>
-            <div>
-                <Image src="/1.jpg" width={300} height={300} alt="Profile Picture" />
-            </div>
-            <div className=" w-10/12 mx-auto ">
-                <div className='pb-5'>
-            Saliha Noor
-                </div>
-                Pin Number : 81391
-            </div>
-
-            </div>
-            </div>
-
-            </Card>
-            <div className='mt-5 flex flex-col'>
-            <Card>
+  return (
+    <Card>
                 <div className='flex py-5 justify-around'>
                 <Button color='3644D9' onClick={()=>{
                     setissue(true)
@@ -86,8 +42,8 @@ export default function Dashboard() {
                 </TableHeader>
                 <TableBody>
                    { 
-                   issue && issueData.map((item, index)=>(     
-                    <TableRow key={index}>
+                   issue && issueData.map((item)=>(     
+                    <TableRow>
                     
                     <TableCell>{item.item_name}</TableCell>
                     <TableCell>{item.Quantity}</TableCell>
@@ -97,8 +53,8 @@ export default function Dashboard() {
                     </TableRow>   
                     ))}
                     {
-                    Return && ReturnData.map((item, index)=>(     
-                        <TableRow key={index}>
+                    Return && ReturnData.map((item)=>(     
+                        <TableRow>
                         
                         <TableCell>{item.item_name}</TableCell>
                         <TableCell>{item.Quantity}</TableCell>
@@ -108,8 +64,8 @@ export default function Dashboard() {
                         </TableRow>   
                         ))
                      }  
-                     {current && currentData.map((item, index)=>(     
-                            <TableRow key={index}>
+                     {current && currentData.map((item)=>(     
+                            <TableRow>
                             
                             <TableCell>{item.item_name}</TableCell>
                             <TableCell>{item.Quantity}</TableCell>
@@ -124,10 +80,5 @@ export default function Dashboard() {
                 </Table>
             </div>
             </Card>
-        </div>
-        </div>
-
-    </div>
   )
 }
-
